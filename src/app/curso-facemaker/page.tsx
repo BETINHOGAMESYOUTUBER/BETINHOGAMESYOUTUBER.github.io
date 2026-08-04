@@ -11,7 +11,6 @@ import InstructorSection from '@/components/sections/InstructorSection';
 import TargetAudienceAndRequirements from '@/components/sections/TargetAudienceAndRequirements';
 import FAQSection from '@/components/sections/FAQSection';
 import OfferCard from '@/components/sections/OfferCard';
-import FloatingMobileCTA from '@/components/sections/FloatingMobileCTA';
 import CookieBanner from '@/components/layout/CookieBanner';
 import { siteConfig } from '@/config/site';
 import { courseConfig } from '@/config/course';
@@ -92,7 +91,6 @@ export default function CoursePage() {
         <OfferCard />
       </main>
 
-      <FloatingMobileCTA />
       <CookieBanner />
       <Footer />
     </div>
