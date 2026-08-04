@@ -1,0 +1,48 @@
+import { PortfolioProject } from '@/types';
+
+export const portfolioProjects: PortfolioProject[] = [
+  {
+    id: 'projeto-01',
+    title: 'Projeto Rosto Digital Personalizado — PES 2021',
+    category: 'Rosto Personalizado',
+    description: 'Transformação de fotografia real em modelo 3D com texturas customizadas e proporções faciais ajustadas.',
+    referenceImage: '/images/portfolio/project-01-ref.webp',
+    processImage: '/images/portfolio/project-01-mesh.webp',
+    ingameImage: '/images/portfolio/project-01-game.webp',
+    platform: 'PES 2021 PC',
+    tags: ['FaceMaker 3D', 'Textura Realista', 'Fotogrametria', 'PC'],
+  },
+  {
+    id: 'projeto-02',
+    title: 'Projeto Atleta Amador — Edição Sob Encomenda',
+    category: 'PES 2021 PC',
+    description: 'Modelagem de atributos e fisionomia para integração de jogador em modo Carreira / Master Liga.',
+    referenceImage: '/images/portfolio/project-02-ref.webp',
+    processImage: '/images/portfolio/project-02-mesh.webp',
+    ingameImage: '/images/portfolio/project-02-game.webp',
+    platform: 'PES 2021 PC',
+    tags: ['Master Liga', 'Face Custom', 'Alinhamento 3D'],
+  },
+  {
+    id: 'projeto-03',
+    title: 'Projeto Player Pro — PES 2021 PS4',
+    category: 'PES 2021 PS4',
+    description: 'Adaptação de características faciais marcantes com foco em compatibilidade para a versão de console PS4.',
+    referenceImage: '/images/portfolio/project-03-ref.webp',
+    processImage: '/images/portfolio/project-03-mesh.webp',
+    ingameImage: '/images/portfolio/project-03-game.webp',
+    platform: 'PES 2021 PS4',
+    tags: ['Console PS4', 'OptiFile', 'Fidelidade Visual'],
+  },
+  {
+    id: 'projeto-04',
+    title: 'Projeto Criador de Conteúdo — Avatar Gamer 3D',
+    category: 'Rosto Personalizado',
+    description: 'Reconstrução digital completa para streaming e criação de conteúdo gamer no PES 2021.',
+    referenceImage: '/images/portfolio/project-04-ref.webp',
+    processImage: '/images/portfolio/project-04-mesh.webp',
+    ingameImage: '/images/portfolio/project-04-game.webp',
+    platform: 'PES 2021 PC',
+    tags: ['Streamer Avatar', 'PES 2021', 'Alta Fidelidade'],
+  },
+];
