@@ -111,7 +111,6 @@ export default function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2 border-t border-white/10 text-center sm:text-left">
             <p>© {currentYear} {siteConfig.brandName}. Todos os direitos reservados.</p>
-            <p className="text-[10px] uppercase">Dark Fantasy Gaming Marketplace</p>
           </div>
         </div>
       </div>
