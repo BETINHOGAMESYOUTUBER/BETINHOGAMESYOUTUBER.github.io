@@ -2,136 +2,156 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { PortfolioProject } from '@/types';
 import Badge from '@/components/ui/Badge';
+import CTAButton from '@/components/ui/CTAButton';
+import { PortfolioProject } from '@/types';
+import { getAssetPath } from '@/lib/assets';
 
 interface PortfolioModalProps {
-  project: PortfolioProject | null;
+  project: PortfolioProject;
   onClose: () => void;
 }
 
 export default function PortfolioModal({ project, onClose }: PortfolioModalProps) {
-  const modalRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    closeButtonRef.current?.focus();
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
       }
     };
 
-    if (project) {
-      document.addEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'hidden';
-      setTimeout(() => {
-        modalRef.current?.focus();
-      }, 50);
-    }
+    window.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [project, onClose]);
-
-  if (!project) return null;
+  }, [onClose]);
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-sm animate-fadeIn"
-      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
     >
       <div
-        ref={modalRef}
-        tabIndex={-1}
+        className="relative w-full max-w-4xl bg-[#151035] border border-white/20 text-white rounded-none p-6 sm:p-8 space-y-6 shadow-2xl my-8 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-4xl bg-[#151035] border border-white/20 p-6 sm:p-8 space-y-6 max-h-[90vh] overflow-y-auto outline-none rounded-none"
       >
-        {/* Header do Modal */}
-        <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
+        {/* Top Header */}
+        <div className="flex items-start justify-between gap-4 border-b border-white/15 pb-4">
           <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <Badge variant="red">{project.category}</Badge>
-              <Badge variant="muted">{project.platform}</Badge>
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="purple">{project.category}</Badge>
+              <span className="text-xs font-mono font-bold text-[#8068E8]">{project.platform}</span>
             </div>
-            <h3 id="modal-title" className="text-lg sm:text-2xl font-black font-outfit text-white uppercase">
+            <h2 id="modal-title" className="text-xl sm:text-2xl font-black font-outfit uppercase tracking-tight text-white">
               {project.title}
-            </h3>
+            </h2>
           </div>
-          
+
           <button
+            ref={closeButtonRef}
             type="button"
             onClick={onClose}
-            aria-label="Fechar janela do projeto"
-            className="p-2 rounded-none bg-white/5 border border-white/15 text-[#C7C3D5] hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+            aria-label="Fechar modal de detalhes do projeto"
+            className="p-2 rounded-none bg-[#0D0828] border border-white/15 text-white hover:text-[#ED3B57] focus:outline-none"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            ✕
           </button>
         </div>
 
-        {/* Descrição */}
-        <p className="text-xs sm:text-sm text-[#C7C3D5] leading-relaxed">
-          {project.description}
-        </p>
-
-        {/* Etapas Visuais com Imagens */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div className="space-y-2">
-            <span className="text-[10px] font-mono text-[#C7C3D5] uppercase block">1. Foto de Referência</span>
-            <div className="aspect-[4/3] rounded-none bg-[#0D0828] border border-white/15 relative overflow-hidden">
+        {/* 3-Step Process Images Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          {/* Step 1: Reference Photo */}
+          <div className="space-y-2 bg-[#0D0828] p-3 border border-white/15 rounded-none text-center">
+            <span className="text-[10px] font-mono font-bold text-[#8068E8] uppercase tracking-widest block">
+              ESTÁGIO 01: REFERÊNCIA
+            </span>
+            <div className="aspect-square bg-[#080417] border border-white/10 relative overflow-hidden">
               <Image
-                src="/images/learn-reference-photo.jpg"
+                src={getAssetPath('/images/learn-reference-photo.jpg')}
                 alt="Fotografia de referência original"
                 fill
-                sizes="300px"
+                sizes="(max-width: 768px) 100vw, 300px"
                 className="object-cover"
               />
             </div>
+            <span className="text-xs font-bold text-white block pt-1">Foto Fotográfica Real</span>
           </div>
 
-          <div className="space-y-2">
-            <span className="text-[10px] font-mono text-[#8068E8] uppercase block">2. Malha 3D / Edição</span>
-            <div className="aspect-[4/3] rounded-none bg-[#0D0828] border border-[#6046C7]/40 relative overflow-hidden">
+          {/* Step 2: Mesh 3D / Wireframe */}
+          <div className="space-y-2 bg-[#0D0828] p-3 border border-white/15 rounded-none text-center">
+            <span className="text-[10px] font-mono font-bold text-[#ED3B57] uppercase tracking-widest block">
+              ESTÁGIO 02: MODELAGEM 3D
+            </span>
+            <div className="aspect-square bg-[#080417] border border-white/10 relative overflow-hidden">
               <Image
-                src="/images/learn-facial-modeling.jpg"
-                alt="Modelagem 3D no Blender"
+                src={getAssetPath('/images/learn-facial-modeling.jpg')}
+                alt="Processo de escultura e malha wireframe 3D"
                 fill
-                sizes="300px"
+                sizes="(max-width: 768px) 100vw, 300px"
                 className="object-cover"
               />
             </div>
+            <span className="text-xs font-bold text-white block pt-1">Malha 3D Wireframe</span>
           </div>
 
-          <div className="space-y-2">
-            <span className="text-[10px] font-mono text-[#ED3B57] uppercase block">3. In-Game PES 2021</span>
-            <div className="aspect-[4/3] rounded-none bg-[#0D0828] border border-[#ED3B57]/30 relative overflow-hidden">
+          {/* Step 3: In-Game Rendering */}
+          <div className="space-y-2 bg-[#0D0828] p-3 border border-white/15 rounded-none text-center">
+            <span className="text-[10px] font-mono font-bold text-[#313A82] uppercase tracking-widest block">
+              ESTÁGIO 03: PES 2021
+            </span>
+            <div className="aspect-square bg-[#080417] border border-white/10 relative overflow-hidden">
               <Image
-                src="/images/learn-pes-application.jpg"
-                alt="Face finalizada renderizada no estádio"
+                src={getAssetPath('/images/learn-pes-application.jpg')}
+                alt="Jogador finalizado renderizado no gramado do PES 2021"
                 fill
-                sizes="300px"
+                sizes="(max-width: 768px) 100vw, 300px"
                 className="object-cover"
               />
             </div>
+            <span className="text-xs font-bold text-[#ED3B57] block pt-1">Resultado Final no Jogo</span>
           </div>
+
         </div>
 
-        {/* Tags */}
-        <div className="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-[#C7C3D5]">
-          <div className="flex flex-wrap gap-1.5 font-mono">
-            {project.tags.map((tag, i) => (
-              <span key={i} className="px-2 py-0.5 rounded-none bg-white/5 border border-white/10 text-[10px]">
-                #{tag}
+        {/* Project Description */}
+        <div className="space-y-3 text-xs sm:text-sm text-[#C7C3D5] leading-relaxed pt-2 border-t border-white/15">
+          <h3 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Detalhes da Edição:</h3>
+          <p>{project.description}</p>
+        </div>
+
+        {/* Modal Actions */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/15">
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag, idx) => (
+              <span key={idx} className="px-2 py-0.5 bg-[#0D0828] border border-white/10 text-[10px] font-mono text-white uppercase">
+                {tag}
               </span>
             ))}
           </div>
-          <span className="text-white/40 font-mono text-[10px]">Pressione ESC para fechar</span>
+
+          <div className="w-full sm:w-auto">
+            <CTAButton
+              href="#oferta"
+              variant="primary"
+              size="md"
+              onClick={onClose}
+              trackingEventName="click_modal_cta"
+            >
+              Aprender este processo →
+            </CTAButton>
+          </div>
         </div>
+
       </div>
     </div>
   );

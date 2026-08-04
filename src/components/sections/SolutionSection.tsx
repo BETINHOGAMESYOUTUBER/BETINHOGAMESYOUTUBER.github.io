@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import SectionTitle from '@/components/ui/SectionTitle';
 import CTAButton from '@/components/ui/CTAButton';
+import { getAssetPath } from '@/lib/assets';
 
 export default function SolutionSection() {
   const stepsList = [
@@ -30,7 +31,7 @@ export default function SolutionSection() {
             <div className="card-gamer-dark rounded-none p-4 bg-[#151035] border-white/20 space-y-4 shadow-none">
               <div className="aspect-[16/9] rounded-none bg-[#0D0828] border border-white/15 relative overflow-hidden flex items-end p-4">
                 <Image
-                  src="/images/workflow-transform-photo-to-face3d.jpg"
+                  src={getAssetPath('/images/workflow-transform-photo-to-face3d.jpg')}
                   alt="Fluxo completo de transformação de fotografia em face 3D para game de futebol"
                   fill
                   sizes="(max-width: 768px) 100vw, 600px"

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { siteConfig } from '@/config/site';
+import { getAssetPath } from '@/lib/assets';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,7 +20,7 @@ export default function Footer() {
               aria-label={siteConfig.brandName}
             >
               <Image
-                src="/images/logo-footer-betinho-games.webp"
+                src={getAssetPath('/images/logo-footer-betinho-games.webp')}
                 alt={siteConfig.brandName}
                 width={268}
                 height={74}

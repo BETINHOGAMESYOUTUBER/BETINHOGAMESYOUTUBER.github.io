@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 import { mainNavigationLinks } from '@/data/navigation';
 import CTAButton from '@/components/ui/CTAButton';
+import { getAssetPath } from '@/lib/assets';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Header() {
           aria-label={siteConfig.brandName}
         >
           <Image
-            src="/images/logo-betinho-games.webp"
+            src={getAssetPath('/images/logo-betinho-games.webp')}
             alt={siteConfig.brandName}
             width={268}
             height={74}

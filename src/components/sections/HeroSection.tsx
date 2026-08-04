@@ -4,6 +4,7 @@ import Badge from '@/components/ui/Badge';
 import CTAButton from '@/components/ui/CTAButton';
 import { courseConfig } from '@/config/course';
 import { siteConfig } from '@/config/site';
+import { getAssetPath } from '@/lib/assets';
 
 export default function HeroSection() {
   const tags = ['Blender', 'Photoshop', 'PES 2021', 'Indicado para iniciantes'];
@@ -14,7 +15,7 @@ export default function HeroSection() {
       {/* Background Graphic Image with Subtle Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-facemaker-betinho-games.jpg"
+          src={getAssetPath('/images/hero-facemaker-betinho-games.jpg')}
           alt="Transformação de fotografia em face 3D para game de futebol"
           fill
           priority
@@ -96,7 +97,7 @@ export default function HeroSection() {
               {/* Full 16:9 Image Display without cropping any models */}
               <div className="aspect-video rounded-none bg-[#0D0828] border border-white/15 relative overflow-hidden">
                 <Image
-                  src="/images/hero-facemaker-betinho-games.jpg"
+                  src={getAssetPath('/images/hero-facemaker-betinho-games.jpg')}
                   alt="Processo completo de transformação: fotografia real, malha 3D wireframe e jogador finalizado"
                   fill
                   sizes="(max-width: 768px) 100vw, 500px"
