@@ -30,7 +30,7 @@ export default function CourseModules() {
           href="#oferta"
           className="px-6 py-2.5 rounded-none bg-transparent border border-white/40 text-xs font-mono font-bold text-white uppercase tracking-widest hover:bg-white/10 transition-all shrink-0"
         >
-          See More
+          VER MAIS
         </a>
       </div>
 

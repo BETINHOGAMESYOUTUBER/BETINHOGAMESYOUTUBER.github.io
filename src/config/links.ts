@@ -20,7 +20,7 @@ export const bioLinks: LinkBioButton[] = [
   {
     id: 'course-checkout',
     title: 'Comece a aprender FaceMaker (Checkout Direto)',
-    subtitle: 'Garanta sua inscrição por R$ 250,00',
+    subtitle: 'Garanta sua inscrição por R$ 297,00',
     url: courseConfig.checkoutUrl,
     isPrimary: false,
     isExternal: true,
