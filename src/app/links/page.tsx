@@ -62,7 +62,7 @@ export default function LinksPage() {
           <LinkBioButton
             button={{
               id: 'youtube',
-              title: 'OFICIAL — YOUTUBE BETINHO GAMES',
+              title: 'OFICIAL YOUTUBE BETINHO GAMES',
               subtitle: 'Gameplays, tutoriais e novidades do PES 2021',
               url: siteConfig.social.youtube.url,
               isPrimary: false,

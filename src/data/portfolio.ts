@@ -3,7 +3,7 @@ import { PortfolioProject } from '@/types';
 export const portfolioProjects: PortfolioProject[] = [
   {
     id: 'projeto-01',
-    title: 'Projeto Rosto Digital Personalizado — PES 2021',
+    title: 'Projeto Rosto Digital Personalizado PES 2021',
     category: 'Rosto Personalizado',
     description: 'Transformação de fotografia real em modelo 3D com texturas customizadas e proporções faciais ajustadas.',
     coverImage: '/images/project-01.jpg',
@@ -15,7 +15,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: 'projeto-02',
-    title: 'Projeto Atleta Amador — Edição Sob Encomenda',
+    title: 'Projeto Atleta Amador Edição Sob Encomenda',
     category: 'PES 2021 PC',
     description: 'Modelagem de atributos e fisionomia para integração de jogador em modo Carreira / Master Liga.',
     coverImage: '/images/project-02-cover.jpg',
@@ -27,7 +27,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: 'projeto-03',
-    title: 'Projeto Player Pro — PES 2021 PS4',
+    title: 'Projeto Player Pro PES 2021 PS4',
     category: 'PES 2021 PS4',
     description: 'Adaptação de características faciais marcantes com foco em compatibilidade para a versão de console PS4.',
     coverImage: '/images/project-03-cover.jpg',
@@ -39,7 +39,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: 'projeto-04',
-    title: 'Projeto Criador de Conteúdo — Avatar Gamer 3D',
+    title: 'Projeto Criador de Conteúdo Avatar Gamer 3D',
     category: 'Rosto Personalizado',
     description: 'Reconstrução digital completa para streaming e criação de conteúdo gamer no PES 2021.',
     coverImage: '/images/project-04-cover.jpg',

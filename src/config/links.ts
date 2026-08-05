@@ -37,7 +37,7 @@ export const bioLinks: LinkBioButton[] = [
     utmCampaign: 'encomenda_rosto_personalizado',
     // Desativado e oculto enquanto a URL oficial não for confirmada pelo produtor
     isEnabled: false,
-    disabledNotice: 'Em breve — aguardando confirmação da URL oficial da loja.',
+    disabledNotice: 'Em breve, aguardando confirmação da URL oficial da loja.',
   },
   {
     id: 'youtube-channel',

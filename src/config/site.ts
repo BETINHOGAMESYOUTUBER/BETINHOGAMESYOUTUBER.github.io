@@ -35,7 +35,7 @@ export const siteConfig = {
 
   // Dados Jurídicos e Contato
   legal: {
-    companyName: 'Betinho Games — Designer FaceMaker',
+    companyName: 'Betinho Games Designer FaceMaker',
     legalName: '[CONFIRMAR RAZÃO SOCIAL OU NOME COMPLETO COM PRODUTOR]',
     document: '[CONFIRMAR CPF OU CNPJ COM PRODUTOR]',
     contactEmail: 'contato@betinhogames.com.br',

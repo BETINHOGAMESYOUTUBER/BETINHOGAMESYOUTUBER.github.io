@@ -108,7 +108,7 @@ export default function HeroSection() {
               {/* Text Caption below image */}
               <div className="text-left space-y-1 pt-1">
                 <span className="text-[10px] font-mono font-bold text-[#8068E8] uppercase tracking-widest block">
-                  PES eFootball 2021 — Processo 3D
+                  PES eFootball 2021 Processo 3D
                 </span>
                 <h3 className="text-base font-black font-outfit text-[#FFFFFF] uppercase tracking-wider leading-tight">
                   Fotografia → Wireframe → Face 3D

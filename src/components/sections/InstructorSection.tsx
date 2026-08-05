@@ -24,7 +24,7 @@ export default function InstructorSection() {
               <div className="w-28 h-28 rounded-none bg-[#ED3B57] p-1 mx-auto relative overflow-hidden border border-[#ED3B57] shadow-lg">
                 <Image
                   src={getAssetPath('/images/creator-betinho-games.webp')}
-                  alt={`${siteConfig.instructorName} — Criador e Editor FaceMaker`}
+                  alt={`${siteConfig.instructorName} Criador e Editor FaceMaker`}
                   fill
                   sizes="112px"
                   className="object-cover"

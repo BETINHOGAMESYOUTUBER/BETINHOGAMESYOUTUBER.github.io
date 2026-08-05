@@ -1,6 +1,6 @@
 export const courseConfig = {
   id: 'curso-facemaker-pes-2021',
-  name: 'Curso FaceMaker — Crie Rostos 3D para PES 2021',
+  name: 'Curso FaceMaker Crie Rostos 3D para PES 2021',
   shortName: 'Curso FaceMaker',
   price: 250.00,
   formattedPrice: 'R$ 250,00',
