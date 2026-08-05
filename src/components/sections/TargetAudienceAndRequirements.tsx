@@ -3,9 +3,9 @@ import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function TargetAudienceAndRequirements() {
   const targetItems = [
+    'quer ter uma renda extra com edições personalizadas;',
     'deseja criar rostos para PES 2021;',
     'quer colocar o próprio rosto no jogo;',
-    'quer ter uma renda extra com edições personalizadas;',
     'gosta de edição e personalização;',
     'tem interesse em Blender e Photoshop;',
     'deseja desenvolver um portfólio;',
