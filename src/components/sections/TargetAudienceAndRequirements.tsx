@@ -5,6 +5,7 @@ export default function TargetAudienceAndRequirements() {
   const targetItems = [
     'deseja criar rostos para PES 2021;',
     'quer colocar o próprio rosto no jogo;',
+    'quer ter uma renda extra com edições personalizadas;',
     'gosta de edição e personalização;',
     'tem interesse em Blender e Photoshop;',
     'deseja desenvolver um portfólio;',
@@ -19,7 +20,8 @@ export default function TargetAudienceAndRequirements() {
     'Photoshop;',
     'PES eFootball 2021;',
     'fotografias de referência;',
-    'tempo para estudar e praticar.',
+    'tempo para estudar e praticar;',
+    'dedicação para praticar e atender pedidos de clientes.',
   ];
 
   return (

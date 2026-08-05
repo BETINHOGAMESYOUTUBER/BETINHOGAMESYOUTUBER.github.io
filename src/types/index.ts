@@ -18,7 +18,7 @@ export interface FAQItem {
 export interface PortfolioProject {
   id: string;
   title: string;
-  category: 'PES 2021 PC' | 'PES 2021 PS4' | 'Rosto Personalizado' | 'Jogador Real';
+  category: 'PES 2021 PC' | 'PES 2021 PS4 Desbloqueado' | 'PES 2021 PS4' | 'Rosto Personalizado' | 'Jogador Real';
   description: string;
   coverImage?: string;
   referenceImage: string;

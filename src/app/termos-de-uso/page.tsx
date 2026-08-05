@@ -38,7 +38,7 @@ export default function TermsOfUsePage() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold font-outfit text-white">2. Objeto e Produto</h2>
             <p>
-              O site destina-se à apresentação do portfólio de edições digitais de <strong>{siteConfig.brandName}</strong> e à comercialização do treinamento online de criação de rostos 3D realistas voltado para o jogo PES 2021 (PC & PS4), pelo valor fixado de <strong>{courseConfig.formattedPrice}</strong>.
+              O site destina-se à apresentação do portfólio de edições digitais de <strong>{siteConfig.brandName}</strong> e à comercialização do treinamento online de criação de rostos 3D realistas voltado para o jogo PES 2021 (PC & PS4 Desbloqueado), pelo valor fixado de <strong>{courseConfig.formattedPrice}</strong>.
             </p>
           </section>
 

@@ -17,7 +17,7 @@ export default function PortfolioGallery() {
     { label: 'Todos', value: 'all' },
     { label: 'Rosto Personalizado', value: 'Rosto Personalizado' },
     { label: 'PES 2021 PC', value: 'PES 2021 PC' },
-    { label: 'PES 2021 PS4', value: 'PES 2021 PS4' },
+    { label: 'PES 2021 PS4 Desbloqueado', value: 'PES 2021 PS4 Desbloqueado' },
   ];
 
   const filteredProjects = selectedFilter === 'all'

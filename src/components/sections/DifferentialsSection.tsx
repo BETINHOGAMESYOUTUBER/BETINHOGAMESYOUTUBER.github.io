@@ -25,7 +25,7 @@ export default function DifferentialsSection() {
     },
     {
       title: 'Foco no Ecossistema PES 2021',
-      description: 'Conhecimento ajustado para as necessidades e padrões visuais do PES 2021 no PC e PS4.',
+      description: 'Conhecimento ajustado para as necessidades e padrões visuais do PES 2021 no PC e PS4 Desbloqueado.',
       icon: '🎮',
     },
     {
