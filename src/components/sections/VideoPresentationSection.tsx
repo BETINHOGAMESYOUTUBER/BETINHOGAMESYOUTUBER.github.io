@@ -16,7 +16,7 @@ export default function VideoPresentationSection() {
   ];
 
   return (
-    <section id="apresentacao-video" className="py-12 md:py-20 bg-[#0D0828] text-white border-b border-white/15 overflow-hidden">
+    <section id="apresentacao" className="py-12 md:py-20 bg-[#0D0828] text-white border-b border-white/15 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         
         {/* Headline & Subheadline */}

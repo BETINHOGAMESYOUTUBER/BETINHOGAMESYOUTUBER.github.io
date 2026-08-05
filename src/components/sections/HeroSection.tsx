@@ -44,7 +44,7 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-sm sm:text-base text-[#C7C3D5] leading-relaxed max-w-2xl">
-              Aprenda com Betinho Games o processo de transformação de fotografias em faces personalizadas utilizando Blender, Photoshop e técnicas aplicadas ao PES eFootball 2021.
+              Aprenda com Betinho Games todo passo a passo do absoluto zero como criar sua Faces personalizadas para o Pes 2021 sem complicação.
             </p>
 
             {/* Tags */}
@@ -59,19 +59,10 @@ export default function HeroSection() {
               ))}
             </div>
 
-            {/* Price & CTA */}
+            {/* CTA */}
             <div className="pt-4 space-y-3 max-w-md">
-              <div className="flex items-baseline gap-3">
-                <span className="text-xs uppercase text-[#C7C3D5] font-bold tracking-widest font-mono">
-                  Investimento único:
-                </span>
-                <span className="text-3xl sm:text-4xl font-black text-white font-outfit">
-                  {courseConfig.formattedPrice}
-                </span>
-              </div>
-
               <CTAButton
-                href="#oferta"
+                href="#apresentacao"
                 variant="primary"
                 size="lg"
                 fullWidth
@@ -120,7 +111,7 @@ export default function HeroSection() {
 
               <div className="space-y-2 pt-1">
                 <CTAButton
-                  href="#oferta"
+                  href="#apresentacao"
                   variant="outline"
                   size="md"
                   fullWidth
