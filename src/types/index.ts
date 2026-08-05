@@ -20,6 +20,7 @@ export interface PortfolioProject {
   title: string;
   category: 'PES 2021 PC' | 'PES 2021 PS4' | 'Rosto Personalizado' | 'Jogador Real';
   description: string;
+  coverImage?: string;
   referenceImage: string;
   processImage: string;
   ingameImage: string;

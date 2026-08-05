@@ -77,8 +77,8 @@ export default function PortfolioModal({ project, onClose }: PortfolioModalProps
             </span>
             <div className="aspect-square bg-[#080417] border border-white/10 relative overflow-hidden">
               <Image
-                src={getAssetPath('/images/learn-reference-photo.jpg')}
-                alt="Fotografia de referência original"
+                src={getAssetPath(project.referenceImage)}
+                alt={`Fotografia de referência original - ${project.title}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
                 className="object-cover"
@@ -94,8 +94,8 @@ export default function PortfolioModal({ project, onClose }: PortfolioModalProps
             </span>
             <div className="aspect-square bg-[#080417] border border-white/10 relative overflow-hidden">
               <Image
-                src={getAssetPath('/images/learn-facial-modeling.jpg')}
-                alt="Processo de escultura e malha wireframe 3D"
+                src={getAssetPath(project.processImage)}
+                alt={`Processo de escultura e malha wireframe 3D - ${project.title}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
                 className="object-cover"
@@ -107,12 +107,12 @@ export default function PortfolioModal({ project, onClose }: PortfolioModalProps
           {/* Step 3: In-Game Rendering */}
           <div className="space-y-2 bg-[#0D0828] p-3 border border-white/15 rounded-none text-center">
             <span className="text-[10px] font-mono font-bold text-[#313A82] uppercase tracking-widest block">
-              ESTÁGIO 03: PES 2021
+              ESTÁGIO 03: RESULTADO FINAL NO JOGO
             </span>
             <div className="aspect-square bg-[#080417] border border-white/10 relative overflow-hidden">
               <Image
-                src={getAssetPath('/images/learn-pes-application.jpg')}
-                alt="Jogador finalizado renderizado no gramado do PES 2021"
+                src={getAssetPath(project.ingameImage)}
+                alt={`Jogador finalizado renderizado no gramado - ${project.title}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
                 className="object-cover"

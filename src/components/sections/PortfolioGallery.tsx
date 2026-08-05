@@ -20,13 +20,6 @@ export default function PortfolioGallery() {
     { label: 'PES 2021 PS4', value: 'PES 2021 PS4' },
   ];
 
-  const projectImages: Record<string, string> = {
-    'projeto-01': '/images/project-01.jpg',
-    'projeto-02': '/images/project-02.jpg',
-    'projeto-03': '/images/project-03.jpg',
-    'projeto-04': '/images/project-04.jpg',
-  };
-
   const filteredProjects = selectedFilter === 'all'
     ? portfolioData
     : portfolioData.filter((p) => p.category === selectedFilter || p.tags.includes(selectedFilter));
@@ -65,7 +58,7 @@ export default function PortfolioGallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 py-4">
           {filteredProjects.map((project) => {
-            const projectImg = projectImages[project.id] || '/images/project-01.jpg';
+            const projectImg = project.coverImage || '/images/project-01.jpg';
 
             return (
               <div
