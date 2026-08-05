@@ -105,13 +105,35 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Trademark Disclaimer */}
-        <div className="border-t border-white/10 pt-6 space-y-2 text-[11px] text-[#C7C3D5]/70 leading-relaxed font-mono">
-          <p>
+        {/* Trademark Disclaimer, Copyright, Platform Disclaimer & Developer Credit */}
+        <div className="border-t border-white/10 pt-6 space-y-4 text-[11px] text-[#C7C3D5] leading-relaxed font-mono">
+          <p className="text-[#C7C3D5]/70">
             PES, eFootball, Blender, Photoshop e marcas mencionadas pertencem aos seus respectivos titulares. Este projeto é independente e não possui vínculo oficial com a Konami ou terceiros.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2 border-t border-white/10 text-center sm:text-left">
+          <div className="pt-2 border-t border-white/10 space-y-3 text-center sm:text-left">
             <p>© {currentYear} {siteConfig.brandName}. Todos os direitos reservados.</p>
+            
+            {siteConfig.platformDisclaimer?.enabled && (
+              <p className="max-w-4xl text-[11px] text-[#C7C3D5]/70 leading-relaxed font-sans">
+                {siteConfig.platformDisclaimer.text}
+              </p>
+            )}
+
+            {siteConfig.developerCredit?.enabled && (
+              <p className="text-[11px] text-[#C7C3D5]/80 font-sans">
+                {siteConfig.developerCredit.label}{' '}
+                <a
+                  href={siteConfig.developerCredit.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={siteConfig.developerCredit.ariaLabel}
+                  className="text-white hover:text-[#ED3B57] font-semibold underline underline-offset-2 transition-colors focus:outline-none focus:ring-1 focus:ring-[#ED3B57]"
+                >
+                  {siteConfig.developerCredit.name}
+                </a>
+                .
+              </p>
+            )}
           </div>
         </div>
       </div>

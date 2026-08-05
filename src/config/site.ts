@@ -42,4 +42,19 @@ export const siteConfig = {
     dpoEmail: 'privacidade@betinhogames.com.br',
     hostingProvider: 'Vercel Inc.',
   },
+
+  // Isenção de Responsabilidade e Afiliação com Plataformas Meta
+  platformDisclaimer: {
+    enabled: true,
+    text: 'Este site não é afiliado, patrocinado, administrado ou associado ao Facebook, Instagram ou à Meta Platforms, Inc. Facebook e Instagram são marcas comerciais de seus respectivos proprietários. As informações, os produtos e os serviços apresentados nesta página são de responsabilidade exclusiva da Betinho Games.',
+  },
+
+  // Crédito de Desenvolvimento e Estratégia
+  developerCredit: {
+    enabled: true,
+    label: 'Estratégia e desenvolvimento por',
+    name: 'Cognição Digital',
+    url: 'https://cognicaodigittal.com/',
+    ariaLabel: 'Visitar o site da Cognição Digital',
+  },
 };
