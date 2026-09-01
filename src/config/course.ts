@@ -17,8 +17,9 @@ export const courseConfig = {
   videoSection: {
     enabled: true,
     provider: 'youtube', // 'youtube' | 'vimeo' | 'custom'
-    videoUrl: '', // URL oficial a ser configurada quando disponível
-    videoId: '', // ID oficial do vídeo no YouTube (ex: 'dQw4w9WgXcQ')
+    videoUrl: 'https://youtube.com/shorts/Sez9gT0_t-I?feature=share', // URL oficial do vídeo no YouTube Shorts
+    videoId: 'Sez9gT0_t-I', // ID oficial do vídeo
+    isShorts: true,
     poster: '/images/hero-facemaker-betinho-games.jpg',
     title: 'Apresentação do Curso FaceMaker por Betinho Games',
     description: 'Neste vídeo, Betinho Games apresenta a proposta do curso, as ferramentas utilizadas e o processo ensinado para transformar fotografias em faces 3D personalizadas para o PES eFootball 2021.',
