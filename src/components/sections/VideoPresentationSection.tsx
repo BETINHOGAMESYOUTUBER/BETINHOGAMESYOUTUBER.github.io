@@ -15,8 +15,6 @@ export default function VideoPresentationSection() {
     'texturas e aplicação no jogo',
   ];
 
-  const isShorts = (videoConfig as { isShorts?: boolean }).isShorts || videoConfig.videoUrl?.includes('/shorts/');
-
   return (
     <section id="apresentacao" className="py-12 md:py-20 bg-[#0D0828] text-white border-b border-white/15 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -28,17 +26,13 @@ export default function VideoPresentationSection() {
           subtitle={videoConfig.description}
         />
 
-        {/* Video Player Card */}
-        <div className={`card-gamer-dark rounded-none bg-[#151035] border-white/20 p-2 sm:p-3 relative overflow-hidden shadow-none mx-auto w-full ${
-          isShorts ? 'max-w-xs sm:max-w-sm' : 'max-w-3xl'
-        }`}>
-          <div className={`w-full rounded-none bg-[#080417] border border-white/15 relative overflow-hidden flex items-center justify-center ${
-            isShorts ? 'aspect-[9/16]' : 'aspect-video'
-          }`}>
+        {/* 16:9 Standard Horizontal Video Player Card (Desktop, Tablet, Mobile) */}
+        <div className="card-gamer-dark rounded-none bg-[#151035] border-white/20 p-2 sm:p-3 relative overflow-hidden shadow-none max-w-3xl mx-auto w-full">
+          <div className="aspect-video w-full rounded-none bg-[#080417] border border-white/15 relative overflow-hidden flex items-center justify-center">
             
             {videoConfig.enabled && videoConfig.videoId ? (
               <iframe
-                src={`https://www.youtube-nocookie.com/embed/${videoConfig.videoId}?rel=0&autoplay=0&loop=1`}
+                src={`https://www.youtube-nocookie.com/embed/${videoConfig.videoId}?rel=0&autoplay=0`}
                 title={videoConfig.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
