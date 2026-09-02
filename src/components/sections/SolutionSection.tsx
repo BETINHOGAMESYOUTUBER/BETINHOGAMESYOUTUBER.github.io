@@ -4,7 +4,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import CTAButton from '@/components/ui/CTAButton';
 import { getAssetPath } from '@/lib/assets';
 
-export default function SolutionSection() {
+export default function SolutionSectionBackup() {
   const steps = [
     {
       number: '01',
