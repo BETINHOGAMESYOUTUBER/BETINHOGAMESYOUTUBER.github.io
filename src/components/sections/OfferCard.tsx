@@ -119,6 +119,7 @@ export default function OfferCard() {
                   variant="green"
                   size="lg"
                   fullWidth
+                  className="btn-shimmer"
                   trackingEventName="click_offer_card_cta"
                 >
                   QUERO FAZER O CURSO
