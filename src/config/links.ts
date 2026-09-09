@@ -25,7 +25,7 @@ export const bioLinks: LinkBioButton[] = [
     isPrimary: false,
     isExternal: true,
     utmCampaign: 'venda_curso_facemaker',
-    isEnabled: true,
+    isEnabled: false,
   },
   {
     id: 'custom-face-store',

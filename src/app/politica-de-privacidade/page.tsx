@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-bold font-outfit text-white">2. Coleta de Dados Pessoais</h2>
             <p>Os dados pessoais do usuário e visitante são coletados nas seguintes situações:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Quando o usuário navega na plataforma ou clica em botões para o checkout de vendas externo da InfinitePay.</li>
+              <li>Quando o usuário navega na plataforma ou clica em botões para o checkout de vendas externo da Kiwify.</li>
               <li>Quando o usuário entra em contato diretamente por e-mail de suporte ({siteConfig.legal.contactEmail}) ou redes sociais.</li>
               <li>Através de cookies de navegação e ferramentas de telemetria estatística (Google Analytics, Meta Pixel), condicionados ao consentimento do usuário.</li>
             </ul>
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
           <section className="space-y-3">
             <h2 className="text-xl font-bold font-outfit text-white">4. Compartilhamento de Dados</h2>
             <p>
-              Os dados de pagamento não são processados diretamente em nossos servidores. As transações financeiras ocorrem inteiramente dentro do ambiente criptografado da processadora de pagamento parceira (InfinitePay). Não vendemos nem compartilhamos dados pessoais com terceiros para fins comerciais não autorizados.
+              Os dados de pagamento não são processados diretamente em nossos servidores. As transações financeiras ocorrem inteiramente dentro do ambiente criptografado da processadora de pagamento parceira (Kiwify). Não vendemos nem compartilhamos dados pessoais com terceiros para fins comerciais não autorizados.
             </p>
           </section>
 

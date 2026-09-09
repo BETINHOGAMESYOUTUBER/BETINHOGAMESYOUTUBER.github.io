@@ -46,44 +46,6 @@ export default function LinksPage() {
             .map((btn) => (
               <LinkBioButton key={btn.id} button={btn} />
             ))}
-
-          <LinkBioButton
-            button={{
-              id: 'course-landing',
-              title: 'OFICIAL CURSO FACEMAKER PES 2021',
-              subtitle: 'Acesse a página oficial do treinamento completo',
-              url: '/curso-facemaker',
-              isPrimary: true,
-              isEnabled: true,
-              utmCampaign: 'bio_instagram_curso',
-            }}
-          />
-
-          <LinkBioButton
-            button={{
-              id: 'youtube',
-              title: 'OFICIAL YOUTUBE BETINHO GAMES',
-              subtitle: 'Gameplays, tutoriais e novidades do PES 2021',
-              url: siteConfig.social.youtube.url,
-              isPrimary: false,
-              isEnabled: true,
-              isExternal: true,
-              utmCampaign: 'bio_instagram_youtube',
-            }}
-          />
-
-          <LinkBioButton
-            button={{
-              id: 'instagram',
-              title: 'INSTAGRAM @BETINHO_GAMES',
-              subtitle: 'Bastidores, novos projetos e contato',
-              url: siteConfig.social.instagram.url,
-              isPrimary: false,
-              isEnabled: true,
-              isExternal: true,
-              utmCampaign: 'bio_instagram_profile',
-            }}
-          />
         </div>
 
       </div>

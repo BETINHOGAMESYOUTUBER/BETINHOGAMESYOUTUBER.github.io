@@ -4,14 +4,28 @@ export const courseConfig = {
   shortName: 'Curso FaceMaker',
   price: 297.00,
   formattedPrice: 'R$ 297,00',
+  installments: {
+    count: 12,
+    value: 'R$ 30,72',
+    formatted: '12x de R$ 30,72',
+  },
+  accessType: 'Acesso vitalício',
   currency: 'BRL',
   category: 'Curso online de criação de rostos 3D para PES eFootball 2021',
   targetGame: 'PES eFootball 2021',
   
-  // Checkout Oficial InfinitePay
-  checkoutUrl: 'https://loja.infinitepay.io/betinhogamesbr/fvt6457-curso-facemaker-pes-21-j',
+  // Checkout Oficial Kiwify
+  checkoutUrl: 'https://pay.kiwify.com.br/KotQF7P',
 
   securityMicrotext: 'Compra realizada em ambiente seguro de pagamento.',
+
+  // Destaques rápidos com check verde
+  highlights: [
+    'Grupo de suporte',
+    'Passo a passo',
+    'Materiais para download',
+    'Acesso Imediato',
+  ],
 
   // Configuração da Seção de Apresentação em Vídeo
   videoSection: {
@@ -26,7 +40,7 @@ export const courseConfig = {
   },
   
   checkoutNotes: [
-    'Você será direcionado para o ambiente seguro de pagamento da InfinitePay.',
+    'Você será direcionado para o ambiente seguro de pagamento da Kiwify.',
     'Formas e condições de pagamento exibidas diretamente no checkout.',
     'Acesso liberado conforme o processo definido pelo produtor após a confirmação.',
   ],

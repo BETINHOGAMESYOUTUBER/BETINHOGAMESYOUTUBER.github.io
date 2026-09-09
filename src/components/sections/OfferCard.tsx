@@ -60,6 +60,38 @@ export default function OfferCard() {
               </p>
             </div>
 
+            {/* Destaques Rápidos com Ícones de Check Verde */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+              {(courseConfig.highlights || [
+                'Grupo de suporte',
+                'Passo a passo',
+                'Materiais para download',
+                'Acesso Imediato',
+              ]).map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-2 sm:gap-2.5 p-2.5 bg-[#0D0828] border border-white/15 rounded-none text-white transition-colors hover:border-white/30"
+                >
+                  <span className="w-5 h-5 rounded bg-[#22C55E] flex items-center justify-center shrink-0 shadow-sm text-white">
+                    <svg
+                      className="w-3.5 h-3.5 stroke-current stroke-[3]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
+                  <span className="font-outfit font-bold text-xs sm:text-xs text-white leading-tight">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
             {/* Inclusions Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
               {inclusions.map((item, idx) => (
@@ -82,14 +114,22 @@ export default function OfferCard() {
                 </span>
 
                 <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-4xl sm:text-5xl font-black text-white font-outfit">
-                    {courseConfig.formattedPrice}
+                  <span className="text-xl sm:text-2xl font-black text-[#C7C3D5] font-outfit uppercase">
+                    12x de
+                  </span>
+                  <span className="text-4xl sm:text-6xl font-black text-white font-outfit tracking-tight">
+                    R$ 30,72
                   </span>
                 </div>
 
-                <p className="text-xs text-[#C7C3D5] font-mono">
-                  Investimento único sem mensalidades.
-                </p>
+                <div className="space-y-1 pt-0.5">
+                  <p className="text-xs text-[#AEB8C4] font-mono">
+                    ou pagamento à vista de {courseConfig.formattedPrice}
+                  </p>
+                  <p className="text-xs font-mono font-bold uppercase tracking-wider text-[#22C55E]">
+                    Acesso vitalício
+                  </p>
+                </div>
               </div>
 
               {/* Primary Call to Action */}
