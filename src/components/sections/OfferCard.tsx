@@ -7,6 +7,10 @@ import { getAssetPath } from '@/lib/assets';
 
 export default function OfferCard() {
   const inclusions = [
+    'Grupo de suporte',
+    'Passo a passo',
+    'Materiais para download',
+    'Acesso Imediato',
     'Acesso completo a todas as videoaulas práticas',
     'Modelagem facial 3D no Blender do início ao fim',
     'Técnicas de texturização e tratamento no Photoshop',
@@ -60,19 +64,14 @@ export default function OfferCard() {
               </p>
             </div>
 
-            {/* Destaques Rápidos com Ícones de Check Verde - Lista Vertical Compacta */}
-            <div className="flex flex-col space-y-2 pt-1 pb-1">
-              {(courseConfig.highlights || [
-                'Grupo de suporte',
-                'Passo a passo',
-                'Materiais para download',
-                'Acesso Imediato',
-              ]).map((item, idx) => (
+            {/* Inclusions Grid - Todos no padrão dos cards com check verde */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+              {inclusions.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 text-xs text-white"
+                  className="flex items-center gap-3 p-3 bg-[#0D0828] border border-white/15 rounded-none text-xs text-white"
                 >
-                  <span className="w-4 h-4 rounded bg-[#22C55E] flex items-center justify-center shrink-0 shadow-xs text-white">
+                  <span className="w-4 h-4 rounded bg-[#22C55E] flex items-center justify-center shrink-0 text-white shadow-xs">
                     <svg
                       className="w-2.5 h-2.5 stroke-current stroke-[3]"
                       fill="none"
@@ -85,21 +84,6 @@ export default function OfferCard() {
                       />
                     </svg>
                   </span>
-                  <span className="font-outfit font-medium text-xs sm:text-sm text-white/90">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Inclusions Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
-              {inclusions.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-3 p-3 bg-[#0D0828] border border-white/15 rounded-none text-xs text-white"
-                >
-                  <span className="w-1.5 h-1.5 bg-[#ED3B57] shrink-0 mt-1.5"></span>
                   <span className="font-outfit uppercase font-semibold">{item}</span>
                 </div>
               ))}
