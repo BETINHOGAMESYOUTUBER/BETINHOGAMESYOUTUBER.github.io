@@ -60,8 +60,8 @@ export default function OfferCard() {
               </p>
             </div>
 
-            {/* Destaques Rápidos com Ícones de Check Verde */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+            {/* Destaques Rápidos com Ícones de Check Verde - Lista Vertical Compacta */}
+            <div className="flex flex-col space-y-2 pt-1 pb-1">
               {(courseConfig.highlights || [
                 'Grupo de suporte',
                 'Passo a passo',
@@ -70,11 +70,11 @@ export default function OfferCard() {
               ]).map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 sm:gap-2.5 p-2.5 bg-[#0D0828] border border-white/15 rounded-none text-white transition-colors hover:border-white/30"
+                  className="flex items-center gap-2 text-xs text-white"
                 >
-                  <span className="w-5 h-5 rounded bg-[#22C55E] flex items-center justify-center shrink-0 shadow-sm text-white">
+                  <span className="w-4 h-4 rounded bg-[#22C55E] flex items-center justify-center shrink-0 shadow-xs text-white">
                     <svg
-                      className="w-3.5 h-3.5 stroke-current stroke-[3]"
+                      className="w-2.5 h-2.5 stroke-current stroke-[3]"
                       fill="none"
                       viewBox="0 0 24 24"
                     >
@@ -85,7 +85,7 @@ export default function OfferCard() {
                       />
                     </svg>
                   </span>
-                  <span className="font-outfit font-bold text-xs sm:text-xs text-white leading-tight">
+                  <span className="font-outfit font-medium text-xs sm:text-sm text-white/90">
                     {item}
                   </span>
                 </div>
