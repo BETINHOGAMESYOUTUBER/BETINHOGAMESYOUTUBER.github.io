@@ -40,7 +40,7 @@ export default function OfferCard() {
             {/* Top Badges */}
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-6">
               <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="red">ACESSO IMEDIATO</Badge>
+                <Badge variant="green">ACESSO IMEDIATO</Badge>
                 <Badge variant="purple">PES 2021</Badge>
               </div>
 
@@ -93,10 +93,6 @@ export default function OfferCard() {
             <div className="p-6 bg-[#0D0828] border border-white/20 text-center space-y-4 rounded-none">
               
               <div className="space-y-1">
-                <span className="text-xs font-mono uppercase font-bold text-[#8068E8] tracking-widest block">
-                  VALOR DE LANÇAMENTO
-                </span>
-
                 <div className="flex items-baseline justify-center gap-2">
                   <span className="text-xl sm:text-2xl font-black text-[#C7C3D5] font-outfit uppercase">
                     12x de
@@ -120,7 +116,7 @@ export default function OfferCard() {
               <div className="max-w-md mx-auto space-y-3 pt-2">
                 <CTAButton
                   href={courseConfig.checkoutUrl}
-                  variant="primary"
+                  variant="green"
                   size="lg"
                   fullWidth
                   trackingEventName="click_offer_card_cta"
@@ -129,23 +125,13 @@ export default function OfferCard() {
                 </CTAButton>
 
                 <div className="flex items-center justify-center gap-2 text-xs text-[#C7C3D5] font-mono">
-                  <svg className="w-4 h-4 text-[#ED3B57] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-[#22C55E] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                   <span>{courseConfig.securityMicrotext}</span>
                 </div>
               </div>
 
-            </div>
-
-            {/* Guarantee Microtext */}
-            <div className="p-4 bg-[#080417] border border-white/10 text-xs text-[#C7C3D5] font-mono space-y-1">
-              <strong className="text-white block uppercase font-outfit tracking-wider">
-                🛡️ Transparência e Suporte
-              </strong>
-              <p className="text-[11px] leading-relaxed">
-                Este treinamento apresenta materiais, ferramentas e etapas para prática e desenvolvimento técnico. O acesso e as orientações serão fornecidos após a confirmação da inscrição.
-              </p>
             </div>
 
           </div>

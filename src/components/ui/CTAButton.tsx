@@ -7,7 +7,7 @@ interface CTAButtonProps {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
-  variant?: 'primary' | 'purple' | 'outline' | 'ghost';
+  variant?: 'primary' | 'green' | 'purple' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
   trackingEventName?: string;
@@ -56,6 +56,8 @@ export default function CTAButton({
   const variantClasses = {
     primary:
       'bg-[#ED3B57] text-white hover:bg-[#D82F49] border border-[#ED3B57] active:translate-y-0.5',
+    green:
+      'bg-[#22C55E] text-white hover:bg-[#16A34A] border border-[#22C55E] active:translate-y-0.5 shadow-lg shadow-[#22C55E]/20',
     purple:
       'bg-[#6046C7] text-white hover:bg-[#8068E8] border border-[#6046C7] active:translate-y-0.5',
     outline:
